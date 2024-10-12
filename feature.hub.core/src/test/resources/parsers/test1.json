@@ -1,0 +1,31 @@
+{
+  "crawlers": [
+    {
+      "id": "site",
+      "name": "SiteCrawler",
+      "domain": "example.com",
+      "url": "https://example.com",
+      "mappingQuery": "[$=id|%=name] > /node > /node2",
+      "totalUnits": 2,
+      "units": [
+        {
+          "name": "SiteCrawler@1/2",
+          "index": 0,
+          "limitRequests": 5
+        },
+        {
+          "name": "SiteCrawler@2/2",
+          "index": 1,
+          "limitRequests": 5
+        }
+      ],
+      "includeCountries": [
+        "US",
+        "GB",
+        "AT",
+        "CA",
+        "JA"
+      ]
+    }
+  ]
+}
