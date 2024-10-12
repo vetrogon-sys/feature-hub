@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Feature Hub</title>
+</head>
+<body>
+    <!--/*@thymesVar id="order_key" type="java.util.List"*/-->
+    <div th:if="${order_key != null && !order_key.isEmpty()}">
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Surname</th>
+            </tr>
+            <tr th:each="person : ${order_key}">
+                <th th:text="${person.id}"/>
+                <th th:text="${person.name}"/>
+                <th th:text="${person.surname}"/>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
